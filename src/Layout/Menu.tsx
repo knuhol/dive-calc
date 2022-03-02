@@ -6,7 +6,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import { DrawerProps, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { styled } from '@mui/material/styles';
 import MuiDrawer from '@mui/material/Drawer';
@@ -70,7 +70,7 @@ const Menu = ({ drawerWidth }: MenuProps) => {
       <List component="nav">
         <ListItemButton component={Link} noLinkStyle href="/">
           <ListItemIcon>
-            <DashboardIcon />
+            <SwapHorizIcon />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItemButton>

@@ -17,21 +17,24 @@ interface StyledNavBarProps extends MuiAppBarProps {
 
 const StyledNavBar = styled(MuiAppBar, {
   shouldForwardProp: prop => !['open', 'drawerWidth'].includes(prop.toString()),
-})<StyledNavBarProps>(({ theme, open, drawerWidth }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+})<StyledNavBarProps>(({ theme, open, drawerWidth }) => {
+  //console.log(theme);
+  return {
+    zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
+      duration: theme.transitions.duration.leavingScreen,
     }),
-  }),
-}));
+    ...(open && {
+      marginLeft: drawerWidth,
+      width: `calc(100% - ${drawerWidth}px)`,
+      transition: theme.transitions.create(['width', 'margin'], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    }),
+  };
+});
 
 interface NavBarProps {
   drawerWidth: number;

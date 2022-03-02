@@ -24,12 +24,12 @@ const App = (props: AppProps) => {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <AppProvider>
+      <AppProvider>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
           <Component {...pageProps} />
-        </AppProvider>
-      </ThemeProvider>
+        </ThemeProvider>
+      </AppProvider>
     </CacheProvider>
   );
 };
