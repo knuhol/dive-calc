@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -18,7 +18,6 @@ interface StyledNavBarProps extends MuiAppBarProps {
 const StyledNavBar = styled(MuiAppBar, {
   shouldForwardProp: prop => !['open', 'drawerWidth'].includes(prop.toString()),
 })<StyledNavBarProps>(({ theme, open, drawerWidth }) => {
-  //console.log(theme);
   return {
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
@@ -47,7 +46,7 @@ const NavBar = ({ drawerWidth }: NavBarProps) => {
     <StyledNavBar position="absolute" open={isMenuOpen} drawerWidth={drawerWidth}>
       <Toolbar
         sx={{
-          pr: '24px', // keep right padding when drawer closed
+          pr: '24px',
         }}
       >
         <IconButton

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
