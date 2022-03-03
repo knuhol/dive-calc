@@ -72,14 +72,14 @@ const Menu = ({ drawerWidth }: MenuProps) => {
           <ListItemIcon>
             <SwapHorizIcon />
           </ListItemIcon>
-          <ListItemText primary="Dashboard" />
+          <ListItemText primary="Decanting" />
         </ListItemButton>
-        <ListItemButton component={Link} noLinkStyle href="/orders">
-          <ListItemIcon>
-            <ShoppingCartIcon />
-          </ListItemIcon>
-          <ListItemText primary="Orders" />
-        </ListItemButton>
+        {/*<ListItemButton component={Link} noLinkStyle href="/orders">*/}
+        {/*  <ListItemIcon>*/}
+        {/*    <ShoppingCartIcon />*/}
+        {/*  </ListItemIcon>*/}
+        {/*  <ListItemText primary="Orders" />*/}
+        {/*</ListItemButton>*/}
       </List>
     </StyledMenu>
   );
